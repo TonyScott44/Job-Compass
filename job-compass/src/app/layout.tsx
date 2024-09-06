@@ -19,12 +19,14 @@ export default function RootLayout({
     
     <html lang="en">
       <body className={inter.className}>
-        <header className="flex justify-between">
-          <Link href="/">Job Compass</Link>
-          <nav>
-            <Link href={'/login'}>Login</Link>
-            <Link href={'/new-listing'}>Post New Job</Link>
-          </nav>
+        <header>
+          <div className="container flex items-center justify-between py-4 px-6 mx-auto">
+            <Link href="/" className="font-bold text-xl">Job Compass</Link>
+            <nav className = "flex gap-2 *:py-4 *:px-4 *:rounded-md">
+              <Link href={'/login'} className="bg-gray-200">Login</Link>
+              <Link href={'/new-listing'} className="bg-black text-white">Post New Job</Link>
+            </nav>
+          </div>
         </header> 
         {children}
       </body>
