@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import Header from "./components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,19 +17,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    
     <html lang="en">
       <body className={inter.className}>
-        <header>
-          <div className="container flex items-center justify-between py-4 px-6 mx-auto">
-            <Link href="/" className="font-bold text-xl">Job Compass</Link>
-            <nav className = "flex gap-2 *:py-4 *:px-4 *:rounded-md">
-              <Link href={'/login'} className="bg-gray-200">Login</Link>
-              <Link href={'/new-listing'} className="bg-black text-white">Post New Job</Link>
-            </nav>
-          </div>
-        </header> 
-        {children}
+        <main className="py-4 px-6 container mx-auto">
+          <Header />
+          {children}
+        </main>
       </body>
     </html>
   );
