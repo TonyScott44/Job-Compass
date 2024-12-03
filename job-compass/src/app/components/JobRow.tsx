@@ -1,7 +1,14 @@
+
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 export default function JobRow() {
     return (
         <>
-            <div className = "bg-white p-4 rounded-3xl shadow-sm">
+            <div className = "bg-white p-4 rounded-lg shadow-sm relative">
+                <div className="absolute top-4 right-4">
+                    <FontAwesomeIcon className="size-4 cursor-pointer text-gray-300" icon={faHeart} />
+                </div>
                 <div className = "flex grow gap-4">
                     <div className="content-center">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Meta-Logo.png" 
